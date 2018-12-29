@@ -1,0 +1,97 @@
+  default_view:
+    view: yes
+    entities:
+      - device_tracker.steves_iphone
+      - device_tracker.patsys_iphone
+      - alarm_control_panel.elkm1_area_001
+      - sensor.elkm1_keypad_001
+      - sensor.elkm1_keypad_002
+      - sensor.elkm1_keypad_003
+      - sun.sun
+      - updater.updater
+      - group.zones
+#  Display floorplan custom state card
+#   zones:
+#     name: Zones
+#     entities:
+#       - binary_sensor.floorplan
+  lights:
+    name: Lights
+    view: yes
+    entities:
+      - light.island
+      - switch.front_hall
+      - switch.front_porch
+      - switch.breezeway
+  alarm:
+    name: Alarm
+    view: yes
+    entities:
+      - group.alarm_motions
+      - group.alarm_doors
+      - group.alarm_windows
+  media:
+    name: Media
+    view: yes
+    entities:
+      - media_player.plex_web_chrome
+      - media_player.living_room
+      - media_player.master_bedroom_tv
+      - media_player.rxa2050_d6cc5b
+      - media_player.rxa2050_d6cc5b_zone_2
+      - media_player.rxa2050_d6cc5b_zone_3
+      - media_player.steves_6s_plus
+  cameras:
+    name: Cameras
+    view: yes
+    entities:
+      - camera.FrontHall
+      - camera.LvngRm
+      - camera.Kitchen
+      - camera.Laundry
+      - camera.MBDoor  
+      - camera.MidBkPrch
+      - camera.BckYrdKit
+      - camera.Driveway
+      - camera.Brzwy
+      - camera.NFrPorch
+      - camera.SFrPorch
+      - camera.Outdoor_Front
+      - camera.Outdoor_Back
+      - camera.Outdoor_Driveway
+      - camera.Indoor
+  alarm_motions:
+    name: Motions
+    entities:
+      - sensor.elkm1_zone_008
+      - sensor.elkm1_zone_009
+      - sensor.elkm1_zone_010
+      - sensor.elkm1_zone_011
+      - sensor.elkm1_zone_012
+  alarm_doors:
+    name: Doors
+    entities:
+      - sensor.elkm1_zone_002
+      - sensor.elkm1_zone_006
+      - sensor.elkm1_zone_007
+      - sensor.elkm1_zone_061
+      - sensor.elkm1_zone_062
+  alarm_windows:
+    name: Windows
+    entities:
+      - sensor.elkm1_zone_001
+      - sensor.elkm1_zone_003
+      - sensor.elkm1_zone_004
+      - sensor.elkm1_zone_005
+      - sensor.elkm1_zone_049
+      - sensor.elkm1_zone_050
+      - sensor.elkm1_zone_051
+      - sensor.elkm1_zone_052
+      - sensor.elkm1_zone_053
+      - sensor.elkm1_zone_054
+      - sensor.elkm1_zone_055
+      - sensor.elkm1_zone_056
+      - sensor.elkm1_zone_057
+      - sensor.elkm1_zone_058
+      - sensor.elkm1_zone_059
+      - sensor.elkm1_zone_060

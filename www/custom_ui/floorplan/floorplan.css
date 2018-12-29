@@ -1,0 +1,192 @@
+/* SVG shapes */
+
+svg, svg * {
+/*  vector-effect: non-scaling-stroke !important; */
+  pointer-events: all !important;
+  background-color: rgb(20,28,78);
+}
+
+/* Hover over */
+
+.entity:hover {
+  stroke: #03A9F4 !important;
+  stroke-width: 1px !important;
+  stroke-opacity: 1 !important;
+}
+
+/* Bootstrap succsss */
+
+.success-text {
+  fill: #3c763d !important;
+}
+
+.success-background, .success-text-background {
+  fill: #dff0d8 !important;
+  fill-opacity: 1 !important;
+  stroke: #d6e9c6 !important;
+  stroke-width: 1px !important;
+}
+
+/* Bootstrap info */
+
+.info-text {
+  fill: #31708f !important;
+}
+
+.info-background, .info-text-background {
+  fill: #d9edf7 !important;
+  fill-opacity: 1 !important;
+  stroke: #bce8f1 !important;
+  stroke-width: 1px !important;
+}
+
+/* Bootstrap warning */
+
+.warning-text {
+  fill: #8a6d3b !important;
+}
+
+.warning-background, .warning-text-background  {
+  fill: #fcf8e3 !important;
+  fill-opacity: 1 !important;
+  stroke: #faebcc !important;
+  stroke-width: 1px !important;
+}
+
+/* Bootstrap danger */
+
+.danger-text {
+  fill: #a94442 !important;
+}
+
+.danger-background, .danger-text-background {
+  fill: #f2dede !important;
+  fill-opacity: 1 !important;
+  stroke: #ebccd1 !important;
+  stroke-width: 1px !important;
+}
+
+/* Last motion entity */
+
+.last-motion {
+  stroke: #808080 !important;
+  stroke-width: 1px !important;
+  stroke-opacity: 1 !important;
+}
+
+/* Blue Iris */
+
+.blue_iris_red {
+  fill: #A21B00 !important;
+}
+
+.blue_iris_yellow {
+  fill: #CA9D00 !important;
+}
+
+.blue_iris_green {
+  fill: #05870D !important;
+}
+
+.blue_iris_white {
+  fill: #FFFFFF !important;
+}
+
+.blue_iris_gray {
+  fill: #535353 !important;
+}
+
+/* Alarm Panel */
+
+.alarm-disarmed {
+  fill: #05870D !important;
+}
+
+.alarm-armed {
+  fill: #d8432e !important;
+}
+
+/* Camera */
+
+.camera-idle {
+/*  fill: #B9CEF7 !important; */
+  fill: #69D8F3 !important;
+}
+
+/* Light */
+
+.light-off {
+  fill: #B4B4B4 !important;
+}
+
+.light-on {
+  fill: #F4EC0F !important;
+}
+
+/* Doorbell */
+
+.doorbell-off {
+  fill: #69D8F3 !important;
+}
+
+.doorbell-on {
+  fill: #F8D2B9 !important;
+}
+
+/* Temperature sensor */
+
+.indoor-temp-low {
+  fill: #2d80ff !important;
+}
+
+.indoor-temp-medium {
+  fill: #05870D !important;
+}
+
+.indoor-temp-high {
+  fill: #A21B00 !important;
+}
+
+.indoor-temp-low-ring {
+  stroke: #2d80ff !important;
+}
+
+.indoor-temp-medium-ring {
+  stroke: #05870D !important;
+}
+
+.indoor-temp-high-ring {
+  stroke: #A21B00 !important;
+}
+
+/* Media player */
+
+.squeezebox-off {
+  fill: #8AA8A7 !important;
+}
+
+.squeezebox-on {
+  fill: #2baaa6 !important;
+}
+
+/* Motion */
+
+.motion-off {
+  stroke: #474747 !important;
+}
+
+.motion-on {
+  stroke: #F2B5B5 !important;
+}
+
+/* Door & Window Sensors */
+
+.sensor-normal {
+  stroke: #A5FBFF !important;
+}
+
+.sensor-violated {
+  stroke: #CC3300 !important;
+}
+
+

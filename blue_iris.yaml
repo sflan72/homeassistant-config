@@ -1,0 +1,92 @@
+# Add Blue Iris cameras
+  - name: FrontHall
+    platform: mjpeg
+    mjpeg_url: !secret FrontHall_url
+    username: !secret bi_username
+    password: !secret bi_password
+    authentication: basic
+  - name: LvngRm
+    platform: mjpeg
+    mjpeg_url: !secret LvngRm_url
+    username: !secret bi_username
+    password: !secret bi_password
+    authentication: basic
+  - name: Kitchen
+    platform: mjpeg
+    mjpeg_url: !secret Kitchen_url
+    username: !secret bi_username
+    password: !secret bi_password
+    authentication: basic
+  - name: Laundry
+    platform: mjpeg
+    mjpeg_url: !secret Laundry_url
+    username: !secret bi_username
+    password: !secret bi_password
+    authentication: basic
+  - name: MBDoor
+    platform: mjpeg
+    mjpeg_url: !secret MBDoor_url
+    username: !secret bi_username
+    password: !secret bi_password
+    authentication: basic
+  - name: MidBkPrch
+    platform: mjpeg
+    mjpeg_url: !secret MidBkPrch_url
+    username: !secret bi_username
+    password: !secret bi_password
+    authentication: basic
+  - name: BckYrdKit
+    platform: mjpeg
+    mjpeg_url: !secret BckYrdKit_url
+    username: !secret bi_username
+    password: !secret bi_password
+    authentication: basic
+  - name: Driveway
+    platform: mjpeg
+    mjpeg_url: !secret Driveway_url
+    username: !secret bi_username
+    password: !secret bi_password
+    authentication: basic
+  - name: Brzwy
+    platform: mjpeg
+    mjpeg_url: !secret Brzwy_url
+    username: !secret bi_username
+    password: !secret bi_password
+    authentication: basic
+  - name: NFrPorch
+    platform: mjpeg
+    mjpeg_url: !secret NFrPorch_url
+    username: !secret bi_username
+    password: !secret bi_password
+    authentication: basic
+  - name: SFrPorch
+    platform: mjpeg
+    mjpeg_url: !secret SFrPorch_url
+    username: !secret bi_username
+    password: !secret bi_password
+    authentication: basic
+  - name: Outdoor_Back
+    platform: mjpeg
+    mjpeg_url: !secret outdoor_back_url
+    username: !secret bi_username
+    password: !secret bi_password
+    authentication: basic
+  - name: Outdoor_Front
+    platform: mjpeg
+    mjpeg_url: !secret outdoor_front_url
+    username: !secret bi_username
+    password: !secret bi_password
+    authentication: basic
+  - name: Outdoor_Driveway
+    platform: mjpeg
+    mjpeg_url: !secret outdoor_driveway_url
+    username: !secret bi_username
+    password: !secret bi_password
+    authentication: basic
+  - name: Indoor
+    platform: mjpeg
+    mjpeg_url: !secret indoor_url
+    username: !secret bi_username
+    password: !secret bi_password
+    authentication: basic
+

@@ -1,0 +1,134 @@
+# Add darksky sensor
+  - platform: darksky
+    api_key: !secret darksky_api
+    units: us
+    monitored_conditions:
+      - temperature
+      - wind_speed
+      - precip_probability
+#      - summary
+#      - precip_intensity
+#      - precip_intensity_max
+#      - dew_point
+#      - wind_bearing
+#      - cloud_cover
+#      - humidity
+#      - nearest_storm_distance
+#      - minutely_summary
+#      - pressure
+#      - visibility
+#      - ozone
+#      - uv_index
+
+# Add a template sensor for the keypad temperature ring displays
+  - platform: template
+    sensors:
+      keypad_01:
+        friendly_name: "Keypad 01 Ring"
+        entity_id: sensor.elkm1_keypad_001
+        unit_of_measurement: "Fahrenheit"
+        value_template: "{{ states.sensor.elkm1_keypad_001.state }}"
+      keypad_02:
+        friendly_name: "Keypad 02 Ring"
+        entity_id: sensor.elkm1_keypad_002
+        unit_of_measurement: "Fahrenheit"
+        value_template: "{{ states.sensor.elkm1_keypad_002.state }}"
+      keypad_03:
+        friendly_name: "Keypad 03 Ring"
+        entity_id: sensor.elkm1_keypad_003
+        unit_of_measurement: "Fahrenheit"
+        value_template: "{{ states.sensor.elkm1_keypad_003.state }}"
+
+# Add a sensor that returns whether or not any zones are violated
+  - platform: template
+    sensors:
+      m1_violated:
+        friendly_name: "m1 Violated"
+        entity_id: sensor.zones_violated
+        value_template: "{{ states.sensor.zones_violated.state }}"
+
+# Add sensors for time, date and outside weather
+  - platform: template
+    sensors:
+      current_time:
+        friendly_name: "Time"
+        value_template: >-
+          {{now().strftime("%-I")}}:{{now().strftime("%M")}} {{now().strftime("%p")}}
+
+  - platform: template
+    scan_interval: 30000
+    sensors:
+      current_date:
+        friendly_name: "Date"
+        value_template: >-
+          {{now().strftime("%A")}}, {{now().strftime("%B")}} {{now().strftime("%d")}}
+
+# Add rest sensor for Blue Iris server stoplight status
+  - platform: rest
+    resource: !secret bi_rest
+    value_template: >-
+       {% if 'signal=red' in value %}
+         red
+       {% elif 'signal=yellow' in value %}
+         yellow
+       {% elif 'signal=green' in value %}
+         green
+       {% endif %}
+    name: Blue Iris Stoplight
+    scan_interval: 10
+
+# Add rest sensor for Blue Iris server profile status
+  - platform: rest
+    resource: !secret bi_rest
+    value_template: >-
+       {% if 'profile=1' in value %}
+         1
+       {% elif 'profile=2' in value %}
+         2
+       {% elif 'profile=3' in value %}
+         3
+       {% elif 'profile=4' in value %}
+         4
+       {% elif 'profile=5' in value %}
+         5
+       {% elif 'profile=6' in value %}
+         6
+       {% elif 'profile=7' in value %}
+         7
+       {% endif %}
+    name: Blue Iris Profile
+    scan_interval: 10
+
+# Test JSON I/F for Blue Iris server - doesn't work because you need to call "login" first
+# to get a session ID, then login with that before issuing any other commands
+#  - platform: rest
+#    resource: !secret bi_JSON
+#    method: POST
+#    username: bi_username
+#    password: bi_password
+#    authentication: basic
+#    payload: {"cmd:status"}
+#    name: Blue Iris JSON test
+
+
+# Sensor creation test
+#  - platform: rest
+#    resource: http://date.jsontest.com
+#    name: JSON time
+#    json_attributes:
+#      - date
+#      - milliseconds_since_epoch
+#    value_template: '{{ value_json.time }}'
+#  - platform: template
+#    sensors: 
+#      date:
+#        friendly_name: 'Date'
+#        value_template: '{{ states.sensor.json_time.attributes["date"] }}'
+#      milliseconds:
+#        friendly_name: 'milliseconds'
+#        value_template: '{{ states.sensor.json_time.attributes["milliseconds_since_epoch"] }}'
+
+
+# Weather prediction
+  - platform: yr
+
